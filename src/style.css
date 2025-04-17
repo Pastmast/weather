@@ -66,6 +66,8 @@ button {
 .weather-bg__img {
   width: 100%;
   height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -214,3 +216,55 @@ button {
   gap: 20px;
   font-size: 40px;
 }
+
+/* Мобильная версия (375px) */
+@media (max-width: 485px) {
+  .container {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .weather-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .weather-form__input {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .weather-form__btn {
+    flex-basis: auto;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .weather-load {
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .weather-info__text {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .weather-bg__img {
+    width: 100vw;
+    height: 100vh;
+    min-width: 120vw;
+    min-height: 120vh;
+  }
+}
+
